@@ -4,15 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/background_color_dashboard">
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -20,6 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <!-- Header -->
             <View
                 android:id="@+id/rectangle_9"
                 android:layout_width="414dp"
@@ -65,12 +68,13 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="8dp"
                 android:gravity="top"
-                android:textFontWeight="500"
                 android:text="@string/enjelin_mor"
                 android:textAppearance="@style/enjelin_mor"
+                android:textFontWeight="500"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/good_aftern" />
 
+            <!-- Card -->
             <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
@@ -128,15 +132,15 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="20dp">
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:gravity="left">
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -146,18 +150,17 @@
                             <ImageView
                                 android:layout_width="24dp"
                                 android:layout_height="24dp"
-                                android:src="@drawable/down_arrow"/>
+                                android:src="@drawable/down_arrow" />
 
                             <TextView
                                 android:id="@+id/income"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="top"
                                 android:text="@string/income"
                                 android:textAppearance="@style/income"
-                                android:gravity="top"
-                                android:textFontWeight="600"
-                                android:layout_marginLeft="5dp"
-                                />
+                                android:textFontWeight="600" />
 
 
                         </LinearLayout>
@@ -166,20 +169,20 @@
                             android:id="@+id/income_value"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="top"
                             android:text="@string/income_value"
                             android:textAppearance="@style/income_value"
-                            android:textFontWeight="500"
-                            android:gravity="top"
-                            android:layout_marginTop="5dp"
-                            />
+                            android:textFontWeight="500" />
 
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:gravity="right">
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -189,19 +192,18 @@
                             <ImageView
                                 android:layout_width="24dp"
                                 android:layout_height="24dp"
-                                android:src="@drawable/down_arrow"
-                                android:rotation="180"/>
+                                android:rotation="180"
+                                android:src="@drawable/down_arrow" />
 
                             <TextView
                                 android:id="@+id/expenses"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="top"
                                 android:text="@string/expenses"
                                 android:textAppearance="@style/income"
-                                android:gravity="top"
-                                android:textFontWeight="600"
-                                android:layout_marginLeft="5dp"
-                                />
+                                android:textFontWeight="600" />
 
 
                         </LinearLayout>
@@ -210,12 +212,11 @@
                             android:id="@+id/expenses_value"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="top"
                             android:text="@string/expenses_value"
                             android:textAppearance="@style/income_value"
-                            android:textFontWeight="500"
-                            android:gravity="top"
-                            android:layout_marginTop="5dp"
-                            />
+                            android:textFontWeight="500" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -224,6 +225,9 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
+
+
+    <include layout="@layout/menu_bottom"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
