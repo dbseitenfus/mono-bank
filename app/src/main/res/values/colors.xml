@@ -8,5 +8,6 @@
     <color name="teal_900">#2F7E79</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="background_color_dashboard">#E5E5E5</color>
+    <color name="background_color_dashboard">#F4F4F4</color>
+    <color name="transference_credit">#25A969</color>
 </resources>
