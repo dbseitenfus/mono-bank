@@ -78,4 +78,11 @@
         <item name="lineHeight">22sp</item>
     </style>
 
+    <style name="spend_smart">
+        <item name="android:textSize">36sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textColor">#438883</item>
+        <item name="lineHeight">38sp</item>
+    </style>
+
 </resources>

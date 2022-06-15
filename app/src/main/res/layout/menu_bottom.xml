@@ -21,7 +21,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/button_1" />
+            android:src="@drawable/button_1_clicked" />
 
         <ImageView
             android:layout_width="wrap_content"

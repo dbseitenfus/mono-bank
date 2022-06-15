@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CardActivity"
+    android:background="@drawable/background_card">
+
+    <!-- Bottom Menu -->
+    <!--<include
+        layout="@layout/menu_bottom" />-->
+    <LinearLayout
+        android:id="@+id/bottomMenuCardActivity"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="22dp"
+        android:paddingBottom="22dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/button1CardActivity"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:src="@drawable/button_1"
+            android:onClick="bottomMenuClickCardActivity"/>
+
+        <ImageView
+            android:id="@+id/button2CardActivity"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:src="@drawable/button_2"
+            android:onClick="bottomMenuClickCardActivity"/>
+
+        <ImageView
+            android:id="@+id/button3CardActivity"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:src="@drawable/button_3_clicked" />
+
+        <ImageView
+            android:id="@+id/button4CardActivity"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:src="@drawable/button_4"
+            android:onClick="bottomMenuClickCardActivity"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

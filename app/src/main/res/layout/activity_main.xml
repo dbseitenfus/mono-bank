@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/background_color_dashboard">
+    tools:context=".MainActivity">
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -239,32 +238,38 @@
 
     </ScrollView>
 
+
+
     <!-- Bottom Menu -->
     <!--<include
         layout="@layout/menu_bottom" />-->
     <LinearLayout
-        android:id="@+id/constraintLayout"
+        android:id="@+id/bottomMenuMainActivity"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@color/white"
         android:orientation="horizontal"
-        android:paddingLeft="10dp"
+        android:paddingLeft="3dp"
         android:paddingTop="22dp"
         android:paddingRight="10dp"
         android:paddingBottom="22dp"
+        android:elevation="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
+            android:id="@+id/button1MainActivity"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/button_1" />
+            android:src="@drawable/button_1_clicked" />
 
         <ImageView
+            android:id="@+id/button2MainActivity"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/button_2" />
+            android:src="@drawable/button_2"
+            android:onClick="bottomMenuClick"/>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -272,37 +277,46 @@
             android:layout_weight="1" />
 
         <ImageView
+            android:id="@+id/button3MainActivity"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/button_3" />
+            android:src="@drawable/button_3"
+            android:onClick="bottomMenuClick"/>
 
         <ImageView
+            android:id="@+id/button4MainActivity"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/button_4" />
+            android:src="@drawable/button_4"
+            android:onClick="bottomMenuClick"/>
 
     </LinearLayout>
 
-    <ImageView
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="75dp"
         android:layout_height="75dp"
+        app:fabCustomSize="75dp"
         android:layout_marginBottom="-37.5dp"
-        android:background="@drawable/bottom_menu_button"
-        android:contentDescription="@string/app_name"
-        android:elevation="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        android:backgroundTint="@color/teal_700"
+        android:elevation="30dp"
+        app:srcCompat="@drawable/ic_baseline_add_24"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/bottomMenuMainActivity"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"></ImageView>
+        app:layout_constraintStart_toStartOf="parent"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
     <View
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_marginBottom="-45dp"
+        android:elevation="5dp"
         android:background="@drawable/circle"
-        android:backgroundTint="@color/background_color_dashboard"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/bottomMenuMainActivity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

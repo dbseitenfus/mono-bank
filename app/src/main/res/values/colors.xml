@@ -10,4 +10,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background_color_dashboard">#F4F4F4</color>
     <color name="transference_credit">#25A969</color>
+    <color name="box_input_text_background_grey_color">#FAFAFA</color>
+    <color name="icon_input_text_grey_color">#9E9E9E</color>
 </resources>
